@@ -8,4 +8,4 @@ RUN apt install -y build-essential sudo curl dbus apt-utils cmake vim nano pytho
 
 WORKDIR /root
 
-ENTRYPOINT [ "/usr/bin/bash"]
+ENTRYPOINT [ "/usr/bin/bash", "-l", "-c"]
