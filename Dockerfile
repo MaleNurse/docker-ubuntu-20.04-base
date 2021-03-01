@@ -4,7 +4,7 @@ LABEL maintainer="Zach McDonough @MaleNurse"
 RUN apt update
 RUN apt upgrade -y
 RUN DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends tzdata
-RUN apt install -y build-essential sudo curl dbus apt-utils cmake vim nano python3 python3-pip python3-setuptools
+RUN apt install -y build-essential git sudo curl dbus apt-utils cmake vim nano python3 python3-pip python3-setuptools
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
