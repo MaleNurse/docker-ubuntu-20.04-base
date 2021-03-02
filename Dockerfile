@@ -12,7 +12,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip install numpy cython pygments==2.4.1
 RUN export ARROW_HOME=/usr/local/lib
 RUN export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-RUN wget https://github.com/apache/arrow/archive/apache-arrow-3.0.0.tar.gz
+RUN wget --no-check-certificate https://github.com/apache/arrow/archive/apache-arrow-3.0.0.tar.gz
 RUN tar -xvf apache-arrow-3.0.0.tar.gz
 RUN mkdir -p /root/arrow-apache-arrow-3.0.0/cpp/build
 WORKDIR /root/arrow-apache-arrow-3.0.0/cpp/build
