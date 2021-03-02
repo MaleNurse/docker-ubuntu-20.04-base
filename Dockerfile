@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 LABEL maintainer="Zach McDonough @MaleNurse"
 
-SHELL /usr/bin/bash
+SHELL ["/usr/bin/bash", "-c"]
 WORKDIR /root
 RUN apt update
 RUN apt upgrade -y
