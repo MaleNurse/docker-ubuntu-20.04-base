@@ -12,8 +12,8 @@ RUN export ARROW_HOME=/usr/local/lib
 RUN export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 RUN wget https://github.com/apache/arrow/archive/apache-arrow-3.0.0.tar.gz
 RUN tar -xvf apache-arrow-3.0.0.tar.gz
-RUN mkdir -p /root/arrow-apache-arrow-1.0.1/cpp/build
-WORKDIR /root/arrow-apache-arrow-1.0.1/cpp/build
+RUN mkdir -p /root/arrow-apache-arrow-3.0.0/cpp/build
+WORKDIR /root/arrow-apache-arrow-3.0.0/cpp/build
 RUN cmake -DCMAKE_INSTALL_PREFIX=$ARROW_HOME -DCMAKE_INSTALL_LIBDIR=lib -DARROW_WITH_BZ2=ON -DARROW_WITH_ZLIB=ON -DARROW_WITH_ZSTD=ON -DARROW_WITH_LZ4=ON -DARROW_WITH_SNAPPY=ON -DARROW_PARQUET=ON -DARROW_PYTHON=ON -DARROW_BUILD_TESTS=OFF ..
 RUN make -j4
 RUN make install
