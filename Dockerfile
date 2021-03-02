@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 LABEL maintainer="Zach McDonough @MaleNurse"
 
+SHELL /usr/bin/bash
 WORKDIR /root
 RUN apt update
 RUN apt upgrade -y
